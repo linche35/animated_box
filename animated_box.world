@@ -30,11 +30,14 @@
           </geometry>
         </visual>
 
+<!--
         <sensor name='my_contact' type='contact'>
           <contact>
             <collision>box_collision</collision>
           </contact>
         </sensor>
+-->
+
       </link>
 
       <plugin name="push_animate" filename="libanimated_box.so"/>
@@ -59,14 +62,16 @@
           </geometry>
         </visual>
 
+<!--
         <sensor name='my_contact2' type='contact'>
           <contact>
             <collision>box_collision</collision>
           </contact>
         </sensor>
+-->
       </link>
 
-      <plugin name="push_animate" filename="libanimated_box.so"/>
+      <plugin name="push_animate" filename="libanimated_box2.so"/>
     </model>        
   </world>
 </sdf>
