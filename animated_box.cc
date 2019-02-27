@@ -24,9 +24,9 @@ namespace gazebo
 {
   class AnimatedBox : public ModelPlugin
   {
-    public: void Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
+    public: void Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/)
     {
-      std::cout << "name = " << _sdf->GetName() << std::endl;
+     // std::cout << "name = " << _sdf->GetName() << std::endl;
       // Store the pointer to the model
       this->model = _parent;
 
