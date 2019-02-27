@@ -1,0 +1,72 @@
+<?xml version="1.0"?> 
+<sdf version="1.4">
+  <world name="animated_box_world">
+
+    <!-- Ground Plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <model name="box">
+      <pose>0 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>4.172357674029369079 1.738894971252158861 1.369794373548019362</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>4.172357674029369079 1.738894971252158861 1.369794373548019362</size>
+            </box>
+          </geometry>
+        </visual>
+
+        <sensor name='my_contact' type='contact'>
+          <contact>
+            <collision>box_collision</collision>
+          </contact>
+        </sensor>
+      </link>
+
+      <plugin name="push_animate" filename="libanimated_box.so"/>
+    </model>
+
+    <model name="box2">
+      <pose>0 -10 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>8.172357674029369079 2.738894971252158861 2.369794373548019362</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>8.172357674029369079 2.738894971252158861 2.369794373548019362</size>
+            </box>
+          </geometry>
+        </visual>
+
+        <sensor name='my_contact2' type='contact'>
+          <contact>
+            <collision>box_collision</collision>
+          </contact>
+        </sensor>
+      </link>
+
+      <plugin name="push_animate" filename="libanimated_box.so"/>
+    </model>        
+  </world>
+</sdf>
