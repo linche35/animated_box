@@ -71,7 +71,7 @@
 -->
       </link>
 
-      <plugin name="push_animate" filename="libanimated_box2.so"/>
+      <plugin name="push_animate" filename="libanimated_box.so"/>
     </model>        
   </world>
 </sdf>

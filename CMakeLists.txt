@@ -17,12 +17,10 @@ link_directories(${GAZEBO_LIBRARY_DIRS})
 add_library(animated_box SHARED animated_box.cc)
 target_link_libraries(animated_box ${GAZEBO_LIBRARIES})
 
-add_library(animated_box2 SHARED animated_box2.cc)
-target_link_libraries(animated_box2 ${GAZEBO_LIBRARIES})
 
 add_executable(integrated_main integrated_main.cc)
 target_link_libraries(integrated_main ${GAZEBO_LIBRARIES} pthread)
 
 
-add_executable(independent_listener independent_listener.cc)
-target_link_libraries(independent_listener ${GAZEBO_LIBRARIES} pthread)
+#add_executable(independent_listener independent_listener.cc)
+#target_link_libraries(independent_listener ${GAZEBO_LIBRARIES} pthread)
